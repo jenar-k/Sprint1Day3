@@ -1,3 +1,4 @@
+
 // ===== While =====
 
 /* 
@@ -116,9 +117,11 @@ myArr2[2] = 'Rabu';
 
 
 // ===== Fungsi didalam Array =====
-
+/* 
 var buah =[];
 buah =['apel', 'belimbing', 'cempedak', 'duku', 'salak', 'pisang']
+ */
+
 
 // 1. JOIN
 // document.write(buah)
@@ -128,25 +131,25 @@ buah =['apel', 'belimbing', 'cempedak', 'duku', 'salak', 'pisang']
 // 2. Push dan pop
 // bekerja di akhir element --> Keyword nya di AKHIR
 // Push tambah element
-buah.push('durian');
+/* buah.push('durian'); */
 //document.write(buah.join('<br>'))
 
 
 //3. Pop (Hapus Element)
-buah.pop()
+/* buah.pop() */
 //document.write(buah.join('<br>'))
 
 
 //4. Unshift dan Shift
 // 4A. Unshift 
 // Unshift berfungsi untuk menambahkan array di AWAL element
-buah.unshift('Jambu Merah');
+/* buah.unshift('Jambu Merah'); */
 // document.write(buah.join('<br>'))
 
 
 // 5A. Shift
 // Shift berfungsi untuk menghapus element aarray di AWAL element
-buah.shift();
+/* buah.shift(); */
 //document.write(buah.join('<br>'))
 
 
@@ -157,15 +160,17 @@ buah.shift();
 buah.splice(2,0,'melon','anggur') //start index berapa, hapus gak, buah apa
 document.write(buah.join('<br>'))
  */
-buah.splice(2,1,'Jeruk','Semangka') //start index berapa, hapus gak index setelahnya, buah apa
+/* buah.splice(2,1,'Jeruk','Semangka') //start index berapa, hapus gak index setelahnya, buah apa */
 // document.write(buah.join('<br>'))
 
 
 //5. SLice
 // Slice memotong array dan membikin array baru
+/* 
 var newBuah = buah.slice(1,3) // N index mulai, N akhir atau tidak diikutkan
 document.write(('<br>'))
 document.write(('<br>'))
+ */
 // document.write(newBuah.join('<br>'))
 
 
@@ -175,11 +180,14 @@ document.write(('<br>'))
 //foreach => tidak mengembalikan array
 
 // FOR EACH
+/* 
 buah.forEach(function(e,i) {
     document.write(i + ' = ' + e + '<br>')
 }
 )
+ */
 
+/* 
 document.write(('<br>'))
 document.write(('<br>'))
 
@@ -187,6 +195,7 @@ buah.forEach(function(e,i) {
     document.write((i+1) + ' = ' + e + '<br>')
 }
 )
+ */
 
 // setiap index dan element yang ada di function buah lakukan perintah berikut
 
@@ -195,7 +204,7 @@ buah.forEach(function(e,i) {
 // bedanya
 // foreach => tidak mengembalikan array
 // MAP => mengembalikan array / punya nilai balik
-
+/* 
 var buahBaru = buah.map(function(e,i){
     return e + ' enak dimakan'
 }
@@ -204,6 +213,9 @@ document.write(('<br>'))
 document.write(('<br>'))
 
 document.write(buahBaru.join('<br>'))
+ */
+
+
 
 
 // ================================================================= //
@@ -240,19 +252,34 @@ var sisiKubusA = parseInt(prompt('masukkan sisi kubus A: '));
 var sisiKubusB = parseInt(prompt('masukkan sisi kubus B: '));
 
 function volumeKubus (sisi) {
-    var volume
-    volume = sisi * sisi * sisi
-    return volume
+    volume = sisi * sisi * sisi;
+    return volume;
 }
+var kubusA = volumeKubus (sisiKubusA);
+var kubusB = volumeKubus (sisiKubusB);
+var jumlahVolume = kubusA + kubusB
 
+/* 
 function jumlahVolumeKubus (a,b){
-    var total
-    var volumeKubusA
-    var volumeKubusB
-
-    volumeKubusA = volumeKubusA
-
-
+    var volumeA = a * a * a
+    var volumeB = b * b * b
+    totalVolumeKubus = volumeA + volumeB;
+    return totalVolumeKubus;
 }
+//var totalVolumeKubusAB = jumlahVolumeKubus (totalVolumeKubus);
+ */
+
+
+document.write ('Sisi Kubus A : ' + sisiKubusA + '<br>');
+document.write ('Sisi Kubus B : ' + sisiKubusB + '<br>');
+document.write ('Volume Kubus A : ' + kubusA + '<br>');
+document.write ('Volume Kubus B : ' + kubusB + '<br>');
+document.write ('Jumlah Total Volume Kubus : ' + jumlahVolume + '<br>');
+
+
+
+
+
+
 
 
